@@ -49,13 +49,16 @@ import Foundation
     (5 < 6 && 5 < 8) : returns true, because 5 is less than 6 and 5 is less than 8
     (5 < 7 || 5 > 10) : returns true, because 5 is less than 7, but even though 5 is not greater than 10, we only need ONE of the statements to be true
  */
-
+print("IF STATEMENT EXAMPLE")
 //The following statements will be referred to as an IF STATEMENT An if statement helps with Control Flow, or what a program should be doing for us. An if statement uses the keyword if followed by an expression check. An example is given below
+
 var number1 = 4
 if (number1 == 4) {
     print("My number is 4")
 }
 
+print("\n")
+print("IF-ELSE STATEMENT EXAMPLE")
 //You will also encounter an ELSE statement, which is what happens if the IF statement isn't true. We can create this as the following
 var number2 = 5
 if (number2 == 4) {
@@ -65,6 +68,8 @@ else {
     print("My number is 5")
 }
 
+print("\n")
+print("IF-ELSE-IF EXAMPLE")
 //An if and else statement is only two different scenarios that can occur (this OR that), but in situations there may be more than one scenario. To account for other scenarios, we can use the keywords ELSE IF, which will be placed BETWEEN the if and else statements, and example is given below
 //practice the below problem by changing the value of myNumber
 var number3 = 6
@@ -78,20 +83,25 @@ else {
     print("My number is 5")
 }
 
+print("\n")
 
-/* PROBLEM 2.0 : IF STATEMENT CONTROL FLOW */
+print("PROBLEM 2.0 : IF STATEMENT CONTROL FLOW")
 // Imagine you're creating a machine that will count your money for you and tell you how wealthy you are based on how much money you have. A variable dollars has been given to you with a value of 0. Write an if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0. Observe what is printed to the console.
 var dollars = 0
 
 
-/* PROBLEM 2.1 : IF STATEMENT CONTROL FLOW */
-// dollars has been updated below to have a value of 10. Write an an if-else statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0, but prints "You've got some spending money!" otherwise. Observe what is printed to the console.
+
+print("\n")
+print("PROBLEM 2.1 : IF STATEMENT CONTROL FLOW")
+// dollars has been updated below to have a value of 10. Write an an if-else statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), but prints "You've got some spending money!" otherwise (else). Observe what is printed to the console.
 dollars = 10
 
 
+//When done, test each of the conditions above by updating the variable to see that the other parts will work.
 
 
-
+print("\n")
+print("USING THE 'AND' SYMBOL - &&")
 //The below problem problem asks us to check between the values of 0 and 100. As a hint, the if and else of this statement should check if dollars is less than 0, or if dollars is greater than 100. There is another scenario where dollars may fall BETWEEN those values, and this can be written with an AND STATEMENT
 //An AND statement is a more advanced check to see if two things are true. We use AND in our daily life. If I have a car AND I have gas, I will drive. If I have free time AND have money, I will go out. Observe the following example of AND (we write AND using two ampersans) &&
 var myNumber = 4
@@ -106,7 +116,14 @@ else {
     print("My number is greater than 4")
 }
 
+//When done, test each of the conditions above by updating the variable to see that the other parts will work.
 
-/* PROBLEM 2.2 : IF STATEMENT CONTROL FLOW */
-// dollars has been updated below to have a value of 105. Write an an if-else-if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0, prints "You've got some spending money!" if dollars is less than 100, and prints "Looks to me like you're rich!" otherwise. Observe what is printed to the console.
+print("\n")
+print("PROBLEM 2.2 : IF STATEMENT CONTROL FLOW")
+// dollars has been updated below to have a value of 105. Write an an if-else-if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), prints "You've got some spending money!" if dollars is less than 100 (else if), and prints "Looks to me like you're rich!" otherwise (else). Observe what is printed to the console.
 dollars = 105
+
+
+//When done, test each of the conditions above by updating the variable to see that the other parts will work.
+
+print("\n")
