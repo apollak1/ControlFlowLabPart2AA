@@ -85,14 +85,14 @@ else {
 
 print("\n")
 
-print("PROBLEM 2.0 : IF STATEMENT CONTROL FLOW")
+print("***PROBLEM 2.0 : IF STATEMENT CONTROL FLOW")
 // Imagine you're creating a machine that will count your money for you and tell you how wealthy you are based on how much money you have. A variable dollars has been given to you with a value of 0. Write an if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0. Observe what is printed to the console.
 var dollars = 0
 
 
 
 print("\n")
-print("PROBLEM 2.1 : IF STATEMENT CONTROL FLOW")
+print("***PROBLEM 2.1 : IF STATEMENT CONTROL FLOW")
 // dollars has been updated below to have a value of 10. Write an an if-else statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), but prints "You've got some spending money!" otherwise (else). Observe what is printed to the console.
 dollars = 10
 
@@ -119,7 +119,7 @@ else {
 //When done, test each of the conditions above by updating the variable to see that the other parts will work.
 
 print("\n")
-print("PROBLEM 2.2 : IF STATEMENT CONTROL FLOW")
+print("***PROBLEM 2.2 : IF STATEMENT CONTROL FLOW")
 // dollars has been updated below to have a value of 105. Write an an if-else-if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), prints "You've got some spending money!" if dollars is less than 100 (else if), and prints "Looks to me like you're rich!" otherwise (else). Observe what is printed to the console.
 dollars = 105
 
