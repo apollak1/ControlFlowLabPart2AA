@@ -103,7 +103,7 @@ dollars = 10
 
 print("\n")
 print("USING THE 'AND' SYMBOL - &&")
-//The below problem problem asks us to check between the values of 0 and 100. As a hint, the if and else of this statement should check if dollars is less than 0, or if dollars is greater than 100. There is another scenario where dollars may fall BETWEEN those values, and this can be written with an AND STATEMENT
+//The below problem  asks us to check between the values of 0 and 100. As a hint, the if and else of this statement should check if dollars is less than 0, or if dollars is greater than 100. There is another scenario where dollars may fall BETWEEN those values, and this can be written with an AND STATEMENT
 //An AND statement is a more advanced check to see if two things are true. We use AND in our daily life. If I have a car AND I have gas, I will drive. If I have free time AND have money, I will go out. Observe the following example of AND (we write AND using two ampersands) &&
 var myNumber = 4
 if (myNumber < 4) {
@@ -121,7 +121,7 @@ else {
 
 print("\n")
 print("***PROBLEM 2.2 : IF STATEMENT CONTROL FLOW")
-// dollars has been updated below to have a value of 105. Write an an if-else-if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), prints "You've got some spending money!" if dollars is less than 100 (else if), and prints "Looks to me like you're rich!" otherwise (else). Observe what is printed to the console.
+// dollars has been updated below to have a value of 105. Write an if-else-if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), prints "You've got some spending money!" if dollars is less than 100 (else if), and prints "Looks to me like you're rich!" otherwise (else). Observe what is printed to the console.
 dollars = 105
 
 
