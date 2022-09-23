@@ -1,6 +1,7 @@
 import Foundation
 
 /*
+ version 9/23/22
  CONTROL FLOW LAB PART 2 A
  
  LAB FUNDAMENTALS:
@@ -9,10 +10,10 @@ import Foundation
     A single line comment is made with two (2) forward slashes
     //Hello world!
  You will also see a statement called print()
-    Anything written inside the two parantheses ( ) will be printed out to the command line in your code.
+    Anything written inside the two parentheses ( ) will be printed out to the command line in your code.
     print("Hello world!") will print out Hello World in the console
     print(4+5) will print out the value of 4 + 5, which is 9
-    print(2-1) will print out hte value of 2 - 1, which is 1
+    print(2-1) will print out the value of 2 - 1, which is 1
 
  
  LAB INFORMATION:
@@ -103,7 +104,7 @@ dollars = 10
 print("\n")
 print("USING THE 'AND' SYMBOL - &&")
 //The below problem problem asks us to check between the values of 0 and 100. As a hint, the if and else of this statement should check if dollars is less than 0, or if dollars is greater than 100. There is another scenario where dollars may fall BETWEEN those values, and this can be written with an AND STATEMENT
-//An AND statement is a more advanced check to see if two things are true. We use AND in our daily life. If I have a car AND I have gas, I will drive. If I have free time AND have money, I will go out. Observe the following example of AND (we write AND using two ampersans) &&
+//An AND statement is a more advanced check to see if two things are true. We use AND in our daily life. If I have a car AND I have gas, I will drive. If I have free time AND have money, I will go out. Observe the following example of AND (we write AND using two ampersands) &&
 var myNumber = 4
 if (myNumber < 4) {
     print ("myNumber is less than 4")
