@@ -1,7 +1,7 @@
 import Foundation
 
 /*
- version 9/23/22
+ version 10/7/22
  CONTROL FLOW LAB PART 2 A
  
  LAB FUNDAMENTALS:
@@ -70,7 +70,7 @@ print("***PROBLEM 2.0 : IF STATEMENT CONTROL FLOW")
 var dollars = 0
 
 
-
+print("\n")
 print("\n")
 
 print("###IF-ELSE STATEMENT EXAMPLE")
@@ -84,6 +84,8 @@ else {
 }
 
 print("\n")
+print("\n")
+
 print("***PROBLEM 2.1 : IF-ELSE STATEMENT CONTROL FLOW")
 // dollars has been updated below to have a value of 10. Write an an if-else statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), but prints "You've got some spending money!" otherwise (else). Observe what is printed to the console.
 dollars = 10
