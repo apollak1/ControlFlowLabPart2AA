@@ -1,7 +1,7 @@
 import Foundation
 
 /*
- version 10/7/22
+ version 10/14/22
  CONTROL FLOW LAB PART 2 A
  
  LAB FUNDAMENTALS:
@@ -134,7 +134,8 @@ else {
 
 print("\n")
 print("***PROBLEM 2.2 : IF-ELSE IF-ELSE STATEMENT CONTROL FLOW")
-// dollars has been updated below to have a value of 105. Write an if-else-if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), prints "You've got some spending money!" if dollars is less than 100 (else if), and prints "Looks to me like you're rich!" otherwise (else). Observe what is printed to the console.
+// dollars has been updated below to have a value of 105. Write an if-else-if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), prints "You've got some spending money!" if dollars is more (>) than zero and (&&) less than (<) 100 (else if), and prints "Looks to me like you're rich!" otherwise (else). Observe what is printed to the console.
+
 dollars = 105
 
 
