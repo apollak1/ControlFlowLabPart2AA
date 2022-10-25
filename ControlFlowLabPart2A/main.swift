@@ -1,236 +1,152 @@
 import Foundation
 
-
-// FUNCTIONS LAB PART 2
-//Version 10/25/22 5:05 p.m.
-
-print("EXAMPLE OF ADDING A RETURN TO A FUNCTION")
-//To understand this, let's look at essay structure example where in the introduction you lay out your plan of how you are going to argue and prove your thesis. And in each paragraph you repeat a piece of the intro as a starting point for the body of the essay. Kind of similar here. You are saying what you are going to prove and then repeat it at the end. (->Int, return).
-//Note that you can then take in values, modify them, and return them all in a function!
-func numberAdder(input: Int) -> Int {
-    let output = input + 5
-    return output
-}
-//This will output 15
-print(numberAdder(input: 10))
-//This lab will not use returns but the next lab will.
-
-print("\n")
-
-print("EXAMPLE 1: ADDING TO A STRING FOR 2.0")
-//Functions can also affect variables that you declare outside of the function (this is referred to as scope), in this example below, the function will add on an "A" into a string
-//You also can add (+) a variable to a text String inside a print parameter ( ).
-//Create an empty string
-var newString = ""
-print(newString)
-
-func addToString() {
-    newString += "A"
-    print("The number of letters I have is " + String(newString))
-}
-//Where you see " + String(newString)" is how you add a var to a String in a print statement.
-
-
-//You "call" a function by its name followed by ().
-//View how the string gets longer after each function call
-addToString()
-addToString()
-addToString()
-addToString()
-
-print("\n")
-
-print( "***PROBLEM 2.0 : STEPPER")
 /*
- As you may have guessed, functions are key to making your app work. For example, in every exercise dealing with step count until now, you have simply assigned a number of steps to a steps variable.
- This isn't very realistic seeing as the number of steps you take increments one at a time and continues changing throughout the day.
- A reoccurring process like this is a perfect candidate for a function. Write a function called incrementSteps AFTER the declaration of steps (0) below that will increment steps by one (+1) and then print its value saying "Your current number of step: ".
- Call the function at least 5 times and observe the printouts.
- */
-var steps = 0
-func incrementSteps() {
-    steps = steps + 1
-    print("Your current number of steps: " + String(steps))
-}
-incrementSteps()
-incrementSteps()
-incrementSteps()
-incrementSteps()
-incrementSteps()
-
-
-print("\n")
-print("\n")
-
-print("***PROBLEM 2.1 : PROGRESS UPDATE")
-
-/*
- This problem will require you to use if, else if, and else statements, make sure to review those!
- Often, if you want to regularly provide progress updates to your user, you can put your control flow statements that check on progress into a function.
+ version 10/7/22
+ CONTROL FLOW LAB PART 2 A
  
- Write a function called progressUpdate AFTER the declaration of constant called goal assigned the value of 10,000.
- Conversions can occur in place, but because we have multiple if/else statements it can get messy looking to be constantly converting the values inside our control flow. To account for this we can simple declare variables at the beginning of our function inside the braces and do the conversion then. So, INSIDE the action of the function start with converting steps and goal into Double and contain or put them into constants "stepUpdate" and "goalUpdate".
- Then begin your if/else statements with the parameters below.
- The function should print "You're off to a good start." if steps is less than 10% of goal, "You're almost halfway there!" If steps is less than half of goal, "You're over halfway there!" If steps is less than 90% of goal, "You're almost there!" if steps is less than goal, and "You beat your goal!" otherwise.
- Update steps to different values and call the function and observe the printout. Remember, you can convert numbers using the appropriate Int or Double initializer.
- */
-steps = 5000
-let goal = 10000
-func progressUpdate() {
-    let stepUpdate = Double(steps)
-    let goalUpdate = Double(goal)
-    if stepUpdate < goalUpdate * 0.10 {
-        print("You're off to a good start!")
-    }
-    else if stepUpdate < goalUpdate * 0.50 {
-        print("You're almost halfway there!")
-    }
-    else if stepUpdate < goalUpdate * 0.90 {
-        print("You're almost there!")
-    }
-    else {
-        print("You beat your goal!")
-    }
-}
-
-progressUpdate()
-
-print("\n")
-
-print("EXAMPLE: ADDING INTEGER PARAMETERS ( ) FOR 2.2 & 2.3")
-//This part will also ask you to take in parameters into your functions. Parameters  ( ) are values that a function can TAKE IN and modify then proceed to output.
-//It's like the introduction paragraph for an essay. You are saying what the topic is (func name) and writing what parts you are going to cover inside parens ( ).
-//The way we define parameters is by selecting the INSIDE of the parens of a function and create a variable and specify its type
-//An example of taking in a number and outputting it using a function is given below
-var finalNumber = 0
-
-//This function is called addNumber and it has two parameters, number 1, and number 2, defined as Ints
-func addNumbers(number1 : Int, number2 : Int) {
-    finalNumber = number1 + number2
-    print(finalNumber)
-}
-
-//Below is how we will pass values into the parameters
-addNumbers(number1: 2, number2: 2)
-addNumbers(number1: 4, number2: 2)
-addNumbers(number1: 6, number2: 2)
-
-print("\n")
-
-print("EXAMPLE PARAMETERS USING String FOR 2.2")
-//Below is an example of creating a function that takes in a String for the parameter
-//Notice how each one is set up and structured.
-func greetName(name : String) {
-    print(name)
-}
-greetName(name: "Andrew")
-
-print("\n")
-
-print("***PROBLEM 2.2 : INTRODUCTION FUNCTION")
-// Write a new introduction function labeled introduction. It should take two String parameters, name and home, and one Int parameter, age. There will not be a return.
-// The function should print a brief introduction. I.e. if "Mary," "California," and 32 were passed into the function, it might print
-// "This is Mary, 32, and is from California." Call the function and observe the printout.
-//Hint: You will have to convert age into a String inside the print statement.
-//Double Hint: You can add spaces and commas as Strings.
-//Then call the function five times passing through different names, homes, and age inputs. Observe the results.
-func introduction(name: String, home: String, age: Int) {
-    print("This is " + name + ", " + String(age) + ", " + "who is from " + home)
-}
-introduction(name: "John", home: "Ireland", age: 22)
-
-print("\n")
-
-print("***PROBLEM 2.3 : STARTING ADDITION")
-// Write a function called almostAddition that takes two Int arguments (number1, number2) with no return.
-// The function should add the two arguments together, subtract 2, and contain the result into a constant named result (one line of code). Then print the result as part of the function.
-//Call the function five times passing in different arguments and observe the printout.
-func almostAddition(number1: Int, number2: Int)  {
-    let result = (number1 + number2) - 2
-    print(result)
-}
-almostAddition(number1: 3, number2: 3)
-
-print("\n")
-
-
-print("EXAMPLE PARAMETERS USING Double FOR 2.4")
-
-func printNumberAsDouble(number: Double) {
-    print(number)
-}
-
-
-print("\n")
-
-print("***PROBLEM 2.4 : STARTING MULTIPLICATION")
-// Write a function called multiply that takes two Double arguments (decimal1 & decimal2). Make sure the arguments are contained in a constant named result. The function should multiply the two arguments and print the result.
-//Call the function five times passing in different arguments and observe the printout.
-func multiply(decimal1: Double, decimal2: Double) {
-    let result = decimal1 * decimal2
-    print(result)
-}
-multiply(decimal1: 2.2, decimal2: 3.4)
-
-print("\n")
-
-
-print("***PROBLEM 2.5 : REWRITING PROGRESS UPDATE - PASSING VALUES")
-/*
+ LAB FUNDAMENTALS:
+ You may notice this text is dark grey, that is because it is inside a PARAGRAPH COMMENT, a paragraph comment is made by using an open paragraph symbol: /* followed by a closed paragraph symbol : */
+ You will also see SINGLE LINE COMMENTS
+ A single line comment is made with two (2) forward slashes
+ //Hello world!
+ You will also see a statement called print()
+ Anything written inside the two parentheses ( ) will be printed out to the command line in your code.
+ print("Hello world!") will print out Hello World in the console
+ print(4+5) will print out the value of 4 + 5, which is 9
+ print(2-1) will print out the value of 2 - 1, which is 1
  
- In many cases you want to provide input to a function. For example, the progress function you wrote in the Functioning App exercise might be located in an area of your project that doesn't have access to the value of steps and goal.
- In that case, whenever you called the function, you would need to provide it with the number of steps that have been taken and the goal for the day so it can print the correct progress statement. In other words, the values of steps and goal is put INSIDE the function and not declared outside of it.
  
- Rewrite the function but name it progressUpdate2, only this time give it two parameters of type Int called givenSteps and givenGoal, respectively. Like before, inside the action, convert givenSteps and givenGoal to Doubles and contain them in constants stepUpdate and goalUpdate respectively.
- It should print "You're off to a good start." if steps is less than 10% of goal (if),
- "You're almost halfway there!" if steps is less than half of goal, "You're over halfway there!" if steps is less than 90% of goal, "You're almost there!" if steps is less than goal, and "You beat your goal!" otherwise (else).
- Call the function five times passing in different arguments and observe the printout.
+ LAB INFORMATION:
+ This lab will prompt you to check if values inside the code are equal or not. This is what we call equality testing. There are a few ways we can write this in code
+ == : this is equals equals, which checks if two values are equal to each other (ie: the same value)
+ 9 == 9 returns true, because 9 is equal to 9, or 9 equals equals 9
+ 
+ != : this is not equal, which checks if two values are NOT equal to each (ie: different values)
+ 9 != 9 returns false, because 9 is equal to 9, meaning that it cannot be 9 not equal to 9
+ 5 != 9 returns true, because 5 is not equal to 9
+ 
+ < : this is less than, which checks if the value on the left hand side is less than the value on the right hand side
+ 10 < 12 returns true, because 10 is less than 12
+ 12 < 10 returns false, because 12 is not less than 12
+ 
+ > : this is greater than, which checks if the value on the left hand side is greater than the value on the right hand side
+ 12 > 10 returns true, because 12 is greater than 10
+ 10 > 12 returns false, because 10 is not greater than 12
+ 
+ >= : this is greater than or equal to, which checks if the value on the left hand side is greater than OR equal to the value on the right hand side
+ 9 >= 10 : return false, because 9 is not greater than or equal to 10
+ 10 >= 10 : returns true, because 10 is equal to (but not greater than) 10
+ 11 >= 10 : returns true, because 11 is greater than (but not equal to) 10
+ 
+ <= : this is less than or equal to, which checks if the value on the left hand side is less than OR equal to the value on the right hand side
+ 9 <= 10 : returns true, because 9 is less than 10
+ 10 <= 10 : returns true, because 10 is equal to (but not less than) 10
+ 11 <= 10 : returns false, because 11 is not less than or equal to 10
+ 
+ You will also see operations of AND and OR. These are coded with the following
+ AND : &&
+ OR : ||
+ These two items check two (or more) conditional statements
+ (5 < 6 && 5 < 8) : returns true, because 5 is less than 6 and 5 is less than 8
+ (5 < 7 || 5 > 10) : returns true, because 5 is less than 7, but even though 5 is not greater than 10, we only need ONE of the statements to be true
  */
-
-func progressUpdate2(steps: Int, goal: Int) {
-    let stepUpdate = Double(steps)
-    let goalUpdate = Double(goal)
-    if stepUpdate < 0.1 * goalUpdate {
-        print("You're off to a good start.")
-    }
-    else if stepUpdate < 0.50 * goalUpdate {
-        print("You're almost halfway there!")
-    }
-    else if stepUpdate < 0.90 * goalUpdate {
-        print("You're almost there!")
-    }
-    else {
-        print("You beat the goal!")
-    }
-}
-
-progressUpdate2(steps: 500, goal: 1000)
-
+print("\n")
 print("\n")
 
 
-print("EXAMPLE OF PASSING BOOLEAN VALUE FOR 2.6")
+print("###IF STATEMENT EXAMPLE")
+//The following statements will be referred to as an IF STATEMENT An if statement helps with Control Flow, or what a program should be doing for us. An if statement uses the keyword if followed by an expression check. An example is given below
 
-func pickBoolean(value : Bool) {
-    print(value)
+var number1 = 4
+if (number1 == 4) {
+    print("My number is 4")
 }
+
+print("\n")
+print("\n")
+
+print("***PROBLEM 2.0 : IF STATEMENT CONTROL FLOW")
+// Imagine you're creating a machine that will count your money for you and tell you how wealthy you are based on how much money you have. A variable dollars has been given to you with a value of 0. Write an if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0. Observe what is printed to the console.
+var dollars = 0
+if (dollars == 0) {
+    print("Sorry, kid. You're broke!")
+}
+
+print("\n")
+print("\n")
+
+print("###IF-ELSE STATEMENT EXAMPLE")
+//You will also encounter an ELSE statement, which is what happens if the IF statement isn't true. We can create this as the following
+var number2 = 5
+if (number2 == 4) {
+    print("My number is 4")
+}
+else {
+    print("My number is 5")
+}
+
+print("\n")
+print("\n")
+
+print("***PROBLEM 2.1 : IF-ELSE STATEMENT CONTROL FLOW")
+// dollars has been updated below to have a value of 10. Write an an if-else statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), but prints "You've got some spending money!" otherwise (else). Observe what is printed to the console.
+dollars = 10
+
+
+//When done, test each of the conditions above by updating the variable to see that the other parts will work.
+
+
+print("\n")
 print("\n")
 
 
-print("***PROBLEM 2.6 : PASSING BOOLEAN VALUES")
-//Write a function called phonePickUpPerson in which a Boolean is passed labeled realPerson.
-//There is no return.
-//In the function write if there is no real person on the line, print "Hang up. Dial another number." Otherwise print "Pick up phone and begin reading sales pitch."
-//Call the function twice with different Boolean values.
-
-
-func phonePickUpPerson(realPerson: Bool) {
-    if (!realPerson) {
-        print("Hang up. Dial another number.")
-    }
-    else {
-        print("Pick up phone and begin reading sales pitch.")
-    }
+print("###IF-ELSE IF-ELSE EXAMPLE")
+//An if and else statement is only two different scenarios that can occur (this OR that), but in situations there may be more than one scenario. To account for other scenarios, we can use the keywords ELSE IF, which will be placed BETWEEN the if and else statements, and example is given below
+//practice the below problem by changing the value of myNumber
+var number3 = 6
+if (number3 == 4) {
+    print("My number is 4")
 }
-phonePickUpPerson(realPerson: true)
-phonePickUpPerson(realPerson: false)
+else if (number3 == 6) {
+    print("My number is 6")
+}
+else {
+    print("My number is 5")
+}
+
+print("\n")
+print("\n")
+
+print("###USING THE 'AND' SYMBOL - && EXAMPLE")
+//The below problem (2.2) asks us to check between the values of 0 and 100. As a hint, the if and else of this statement should check if dollars is less than 0, or if dollars is greater than 100. There is another scenario where dollars may fall BETWEEN those values, and this can be written with an AND STATEMENT
+//An AND statement is a more advanced check to see if two things are true. We use AND in our daily life. If I have a car AND I have gas, I will drive. If I have free time AND have money, I will go out. Observe the following example of AND (we write AND using two ampersands) &&
+var myNumber = 4
+if (myNumber < 4) {
+    print ("myNumber is less than 4")
+}
+//If myNumber is greater than 3 AND myNumber is less than 5, print out something...
+else if (myNumber > 3 && myNumber < 5) {
+    print("My number is between 3 and 5")
+}
+else {
+    print("My number is greater than 4")
+}
+
+//When done, test each of the conditions above by updating the variable to see that the other parts will work.
+
+print("\n")
+print("***PROBLEM 2.2 : IF-ELSE IF-ELSE STATEMENT CONTROL FLOW")
+// dollars has been updated below to have a value of 105. Write an if-else-if statement that prints "Sorry, kid. You're broke!" if dollars has a value of 0 (if), prints "You've got some spending money!" if dollars is more (>) than zero and (&&) less than (<) 100 (else if), and prints "Looks to me like you're rich!" otherwise (else). Observe what is printed to the console.
+dollars = 0
+if (dollars == 0) {
+    print("Sorry, kid, you're broke!")
+}
+else if (dollars < 100) {
+    print("You've got some spending money!")
+}
+else {
+    print("Looks to me like you're rich!")
+}
+//When done, test each of the conditions above by updating the variable to see that the other parts will work.
+
+print("\n")
